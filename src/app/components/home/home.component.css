@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 75px; */
+    min-height: 545px;
+    width: 100%;
+    /* min-width: 1200px; */
+    background: #4a4a4a;
+    flex-grow: 1;
+    color: white;
+}
+.card-wrapper{
+    text-align: center;
+}
+.small-card-wrapper{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px;
+}

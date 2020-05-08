@@ -1,0 +1,16 @@
+<mat-toolbar class="nav-bar mat-elevation-z2">
+    <h1>Coronavirus Live tracker</h1>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+  
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Mail</button>
+        <button mat-menu-item>LinkedIn</button>
+    </mat-menu>
+      
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <!-- <mat-icon>more_vert</mat-icon> -->
+        Get In Touch
+      </button>
+  </mat-toolbar>

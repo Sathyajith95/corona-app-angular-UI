@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <h4>Pick a country!</h4>
+    <mat-form-field>
+        <mat-label>State</mat-label>
+        <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="card-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>
