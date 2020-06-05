@@ -1,13 +1,33 @@
-<div class="wrapper">
-    <h4>Pick a country!</h4>
+<div class="page-main">
+    <h2>Pick a country below</h2>
     <mat-form-field>
-        <mat-label>State</mat-label>
-        <mat-select>
-            <mat-option>None</mat-option>
+        <mat-label class="label">Country</mat-label>
+        <mat-select class="mat-select-content" (selectionChange) = onSelected($event.value)>
+            <mat-option >None</mat-option>
             <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
         </mat-select>
     </mat-form-field>
-    <div class="card-wrapper">
-        <router-outlet></router-outlet>
+    <div class="card-wrapper" *ngIf = "countrySelected">
+        <mat-card>
+            <mat-card-title>{{countrySelected}}</mat-card-title>
+            <div class="small-card-wrapper">
+                <mat-card>
+                    <mat-card-subtitle>Total Cases:</mat-card-subtitle>
+                    <mat-card-content>{{coronaData.coronaVirusCases}}</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-subtitle>Deaths:</mat-card-subtitle>
+                    <mat-card-content>{{coronaData.deaths}}</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-subtitle>Recovered:</mat-card-subtitle>
+                    <mat-card-content>{{coronaData.recovered}}</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-subtitle>Active Cases:</mat-card-subtitle>
+                    <mat-card-content>{{coronaData.activeCases}}</mat-card-content>
+                </mat-card>
+            </div>
+        </mat-card>
     </div>
 </div>
